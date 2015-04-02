@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OneTheBusClient.cs" />
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +64,10 @@
     <ProjectReference Include="..\OnTheBus.Conventions\OnTheBus.Conventions.csproj">
       <Project>{AB91FD41-83E4-4E44-8C71-74E350778791}</Project>
       <Name>OnTheBus.Conventions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnTheBus.Messages\OnTheBus.Messages.csproj">
+      <Project>{577569C8-3428-4733-A016-2A652B7F2D8E}</Project>
+      <Name>OnTheBus.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
