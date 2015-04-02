@@ -1,8 +1,7 @@
 
-using System.Threading;
 using OnTheBus.Conventions;
 
-namespace OnTheBus.Backend
+namespace OnTheBus.Client2
 {
     using NServiceBus;
 
@@ -15,9 +14,9 @@ namespace OnTheBus.Backend
         public void Customize(BusConfiguration configuration)
         {
             configuration.UsePersistence<InMemoryPersistence>();
-            
+
             configuration.UseTransport<RabbitMQTransport>();
-            
+
             configuration.Conventions().MyDefaultConventions();
         }
     }
