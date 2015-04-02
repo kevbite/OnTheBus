@@ -17,14 +17,41 @@ namespace OnTheBus.Client
         {
             while (true)
             {
-                Console.WriteLine("Say hello to who?");
-                var name = Console.ReadLine();
+                Console.WriteLine("What do you want to do?");
+                Console.WriteLine("1 - Say Hello?");
+                Console.WriteLine("2 - Reverse text?");
 
-                var message = new SayHelloCommand() {Name = name};
-                _bus.Send(message);
-
-                Console.WriteLine("Message Sent");
+                if (Console.ReadLine() == "1")
+                {
+                    SayHello();
+                }
+                else
+                {
+                    ReverseText();
+                }
             }
+        }
+
+        private void ReverseText()
+        {
+            Console.WriteLine("Text to reverse?");
+            var name = Console.ReadLine();
+
+            var message = new ReverseCommand() { Text = name };
+            _bus.Send(message);
+
+            Console.WriteLine("Message Sent");
+        }
+
+        private void SayHello()
+        {
+            Console.WriteLine("Say hello to who?");
+            var name = Console.ReadLine();
+
+            var message = new SayHelloCommand() {Name = name};
+            _bus.Send(message);
+
+            Console.WriteLine("Message Sent");
         }
 
         public void Stop()

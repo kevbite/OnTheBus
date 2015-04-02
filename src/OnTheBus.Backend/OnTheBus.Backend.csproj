@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseCommandHandler.cs" />
     <Compile Include="SayHelloCommandHandler.cs" />
   </ItemGroup>
   <ItemGroup>
